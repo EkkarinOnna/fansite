@@ -1,0 +1,194 @@
+/* Reset Basic Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #0f0f12;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+/* Hero Section */
+.hero {
+  height: 60vh;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(15,15,18,1)), 
+              url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&q=80&w=1200') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: 4px;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: #e50914;
+  letter-spacing: 3px;
+  font-weight: 600;
+}
+
+/* Containers */
+.container {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  text-align: center;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #e50914;
+  margin: 8px auto 0;
+}
+
+/* Profile Card */
+.profile-card {
+  display: flex;
+  background: #18181c;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.profile-img {
+  flex: 1;
+  min-width: 280px;
+}
+
+.profile-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.profile-info {
+  flex: 1.5;
+  padding: 35px;
+}
+
+.profile-info h3 {
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+}
+
+.profile-info .tagline {
+  color: #888;
+  font-size: 0.9rem;
+  margin-bottom: 25px;
+}
+
+.info-list {
+  list-style: none;
+}
+
+.info-list li {
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+  color: #ddd;
+}
+
+.info-list strong {
+  color: #fff;
+}
+
+/* Discography Section */
+.album-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.album-card {
+  background: #18181c;
+  padding: 25px;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid #28282e;
+  transition: transform 0.3s ease;
+}
+
+.album-card:hover {
+  transform: translateY(-5px);
+}
+
+.album-card.highlight {
+  border-color: #e50914;
+}
+
+.album-card h4 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.album-card span {
+  color: #777;
+  font-size: 0.85rem;
+}
+
+/* Social Buttons */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  background: #18181c;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 25px;
+  border: 1px solid #333;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #e50914;
+  border-color: #e50914;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 30px;
+  font-size: 0.8rem;
+  color: #555;
+  border-top: 1px solid #18181c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profile-card {
+    flex-direction: column;
+  }
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+}
